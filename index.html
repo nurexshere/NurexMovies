@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="movie.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <title>NUREX ENTERTAINMENT</title>
+    <style>
+      .grid {
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        color: white;
+      }
+body{
+  background-color:antiquewhite;
+  color: black;
+}
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        max-width: 300px;
+      }
+
+      .card img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nurex Movies</h1>
+      <form>
+        <label for="search">Search for movies:</label>
+        <input type="text" id="search" />
+        <button class="btn btn-warning shadow-lg text-white rounded-pill" onclick="searchMovie()" type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <div class="grid" id="output"></div>
+    </main>
+
+    <div class="container-xl mb-5 mt-5" id="popularMoviesCardDiv">
+      <h2 class="fw-normal">Pupular Movies</h2>
+      <div class="row mt-5" id="popularMoviesCard"></div>
+    </div>
+    <script src="movie.js"></script>
+  </body>
+</html>

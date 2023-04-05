@@ -1,0 +1,107 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  h2{
+    background-color: brown;
+    
+  }
+  h3{
+    text-align: left;
+    size-adjust: 115px;
+    color: red;
+  }
+  h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-shadow: red;
+  }
+ 
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  
+  #search {
+    text-align: left;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10pt;
+    box-shadow: 0px 0px 5px black;
+    width: 100%;
+    max-width: 500px;
+    color: black;
+    background-color: wheat;
+    box-shadow: black;
+
+  }
+  
+  
+  #searchBtn {
+    margin-bottom: 50;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:black;
+    color:black;
+    cursor: pointer;
+    box-shadow: red;
+    
+
+  }
+  
+  
+  #searchBtn:hover {
+    background-color: orange;
+  }
+  
+ 
+  .grid-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s ease;
+  }
+  
+
+  .grid-item:hover::after {
+    opacity: 1;
+  }
+  
+  .grid-item::before {
+    content: "View Details";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  
+  
+  
+  
